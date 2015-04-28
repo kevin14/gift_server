@@ -24,7 +24,7 @@ public class ListDao {
     static {
         try {
 
-            
+
             Configuration configuration = new Configuration();
             configuration.configure();
 
