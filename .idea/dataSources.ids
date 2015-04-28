@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - giftbox@localhost" uuid="243f4c33-8bf7-4157-a72e-7ed351e17d88">
+    <database-info product="MySQL" version="5.6.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="giftbox"/>
+    <table name="gbtb_cart" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="55So5oi3SUQ="/>
+      <column name="order_price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5Lu35qC8"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSUQ="/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_code" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="code_name" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" remarks="Q29kZeWQjQ=="/>
+      <column name="code_value" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12" remarks="Q29kZeWAvA=="/>
+      <column name="code_catagory" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12" remarks="Q29kZeexu+WIqw=="/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_favorite" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="55So5oi3SUQ="/>
+      <column name="order_price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5Lu35qC8"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSUQ="/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_product_info" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="product_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5ZCN56ew"/>
+      <column name="product_description" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB566A5LuL"/>
+      <column name="product_price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5Lu35qC8"/>
+      <column name="product_region" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1" remarks="5Zyw5Yy6"/>
+      <column name="product_category" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1" remarks="5ZWG5ZOB57G75Yir"/>
+      <column name="product_tag" sqlType="CHAR" precision="3" scale="0" nullable="true" jdbcType="1" remarks="5ZWG5ZOB5qCH562+"/>
+      <column name="product_pick" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5Yqg5YWl56S85YyF"/>
+      <column name="product_choose" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5pyA57uI6YCJ5oup"/>
+      <column name="product_rate_1" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOB6K+E5Lu377yIMeaYn++8iQ=="/>
+      <column name="product_rate_2" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOB6K+E5Lu377yIMuaYn++8iQ=="/>
+      <column name="product_rate_3" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOB6K+E5Lu377yIM+aYn++8iQ=="/>
+      <column name="product_rate_4" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOB6K+E5Lu377yINOaYn++8iQ=="/>
+      <column name="product_rate_5" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOB6K+E5Lu377yINeaYn++8iQ=="/>
+      <column name="product_mainpic" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5aSn5Zu+"/>
+      <column name="product_detail" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB6K+m57uG5LuL57uN"/>
+      <column name="product_pic_1" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+MQ=="/>
+      <column name="product_pic_2" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+Mg=="/>
+      <column name="product_pic_3" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+Mw=="/>
+      <column name="product_pic_4" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+NA=="/>
+      <column name="product_pic_5" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+NQ=="/>
+      <column name="product_pic_6" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+Ng=="/>
+      <column name="product_pic_7" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+Nw=="/>
+      <column name="product_pic_8" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5bGV56S65Zu+OA=="/>
+      <column name="product_album" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB55u45YaM"/>
+      <column name="product_video" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5a6j5Lyg6KeG6aKR5Zyw5Z2A"/>
+      <column name="product_sub_title" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC95qCH6aKY"/>
+      <column name="product_sub_detail" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC95YaF5a65"/>
+      <column name="product_subcont_pic_1" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHMQ=="/>
+      <column name="product_subcont_title_1" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYMQ=="/>
+      <column name="product_subcont_detail_1" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65MQ=="/>
+      <column name="product_subcont_pic_2" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHMg=="/>
+      <column name="product_subcont_title_2" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYMg=="/>
+      <column name="product_subcont_detail_2" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65Mg=="/>
+      <column name="product_subcont_pic_3" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHMw=="/>
+      <column name="product_subcont_title_3" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYMw=="/>
+      <column name="product_subcont_detail_3" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65Mw=="/>
+      <column name="product_subcont_pic_4" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHNA=="/>
+      <column name="product_subcont_title_4" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYNA=="/>
+      <column name="product_subcont_detail_4" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65NA=="/>
+      <column name="product_subcont_pic_5" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHNQ=="/>
+      <column name="product_subcont_title_5" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYNQ=="/>
+      <column name="product_subcont_detail_5" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65NQ=="/>
+      <column name="product_subcont_pic_6" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5Zu+54mHNg=="/>
+      <column name="product_subcont_title_6" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5qCH6aKYNg=="/>
+      <column name="product_subcont_detail_6" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB5q616JC96K+m57uG5YaF5a65Ng=="/>
+      <column name="provider_address" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5a625Zyw5Z2A"/>
+      <column name="product_list" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" remarks="56S854mp5riF5Y2V"/>
+      <column name="product_list_comment" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="56S854mp5riF5Y2V5aSH5rOo"/>
+      <column name="product_hint" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12" remarks="5raI6LS55o+Q56S6"/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_product_review" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSUQ="/>
+      <column name="product_reivew" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="5ZWG5ZOB6K+E6K66"/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_product_tag" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSUQ="/>
+      <column name="tag_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5qCH562+SUQ="/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_trade_record" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="record_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6K6i5Y2V5Y+3"/>
+      <column name="fetch_code" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5o+Q5Y+W56CB"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="55So5oi3SUQ="/>
+      <column name="order_price" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5Lu35qC8"/>
+      <column name="order_region" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1" remarks="5Zyw5Yy6"/>
+      <column name="order_status" sqlType="CHAR" precision="2" scale="0" nullable="true" jdbcType="1" remarks="54q25oCB"/>
+      <column name="product_id_1" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfMQ=="/>
+      <column name="product_id_2" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfMg=="/>
+      <column name="product_id_3" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfMw=="/>
+      <column name="product_id_4" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfNA=="/>
+      <column name="product_id_5" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfNQ=="/>
+      <column name="product_id_6" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5ZWG5ZOBSURfNg=="/>
+      <column name="product_choose" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6YCJ5oup5ZWG5ZOB"/>
+      <column name="giver_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="6YCB56S85Lq65ZCN56ew"/>
+      <column name="giver_cell" sqlType="VARBINARY" precision="48" scale="0" nullable="true" jdbcType="-3" remarks="6YCB56S85Lq65omL5py65Y+3"/>
+      <column name="giver_email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12" remarks="6YCB56S85Lq66YKu566x"/>
+      <column name="recevier_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5pS256S85Lq65ZCN56ew"/>
+      <column name="receiver_cell" sqlType="VARBINARY" precision="48" scale="0" nullable="true" jdbcType="-3" remarks="5pS256S85Lq65omL5py65Y+3"/>
+      <column name="receiver_email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12" remarks="5pS256S85Lq66YKu566x"/>
+      <column name="order_comment" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12" remarks="55WZ6KiA"/>
+      <column name="order_expire" sqlType="VARCHAR" precision="8" scale="0" nullable="true" jdbcType="12" remarks="6YCB56S85pel"/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="gbtb_user_info" schema="" catalog="giftbox" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" remarks="SUQ="/>
+      <column name="login_id" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="5biQ5Y+3"/>
+      <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12" remarks="55So5oi35ZCN"/>
+      <column name="login_pwd" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="5a+G56CB"/>
+      <column name="login_token" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12" remarks="VG9rZW4="/>
+      <column name="cell" sqlType="VARBINARY" precision="48" scale="0" nullable="true" jdbcType="-3" remarks="6IGU57O755S16K+d"/>
+      <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12" remarks="6YKu5Lu25Zyw5Z2A"/>
+      <column name="contact_other" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" remarks="5YW25LuW6IGU57O75pa55byP"/>
+      <column name="head_portrait" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12" remarks="5aS05YOP"/>
+      <column name="create_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5Yib5bu65pe26Ze0"/>
+      <column name="update_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93" remarks="5pu05paw5pe26Ze0"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

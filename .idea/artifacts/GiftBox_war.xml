@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="GiftBox:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="GiftBox.war">
+      <element id="artifact" artifact-name="GiftBox:war exploded" />
+    </root>
+  </artifact>
+</component>
