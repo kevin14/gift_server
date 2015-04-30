@@ -1,0 +1,284 @@
+@import './lib/common.less';
+@import './lib/base.less';
+
+.wrapper{
+	background-color: @colorWhite;
+	.box-shadow(0 0 5px rgba(0,0,0,0.1));
+}
+.slider{
+	height: 580px;
+	position: relative;
+	overflow: hidden;
+	.img-link{
+		width: 1920px;
+		height: 580px;
+		position: absolute;
+		margin-left: -960px;
+		left: 50%;
+		top: 0;
+		display: none;
+		&.show{
+			display: block;
+		}
+		.img{
+			width: 1920px;
+			height: 580px;
+		}
+	}
+	.btn-box{
+		width: 1120px;
+		margin: 260px auto 0;
+		position: relative;
+		z-index: 100;
+		.btn{
+			width: 60px;
+			height: 60px;
+			border:3px solid rgba(255,255,255,0.5);
+			border-radius: 36px;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			font-size: 20px;
+			line-height: 60px;
+			text-align: center;
+			color: rgba(255,255,255,0.5);
+			&.prev{
+				left: 0;
+			}
+			&.next{
+				right: 0;
+			}
+		}
+	}
+}
+.big-guider{
+	height: 50px;
+	width: 1040px;
+	left: 50%;
+	margin-left: -520px;
+	position: absolute;
+	.big-guider-content{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 320px;
+		height: 230px;
+		background-color: #f6442c;
+		.guide-img{
+			position: relative;
+		}
+		.price-box{
+			width: 320px;
+			height: 180px;
+			background-color: @colorWhite;
+			text-align: center;
+			color: @colorGray;
+			overflow: hidden;
+			.title{
+				font-size: 16px;
+				display: block;
+				margin-top: 20px;
+			}
+			.cur-price{
+				font-size: 60px;
+				color: @colorOrange;
+				display: inline-block;
+				margin-top: 30px;
+			}
+			.ic{
+				position: absolute;
+				display: inline-block;
+				color: @colorOrange;
+				font-size: 18px;
+				top: 85px;
+				right: 75px;
+			}
+			.another-price{
+				font-size: 14px;
+				position: absolute;
+				display: inline-block;
+				top: 88px;
+				right: 30px;
+			}
+			.unit{
+				font-size: 16px;
+				margin-top: 16px;
+				display: block;
+			}
+		}
+		.select{
+			position: absolute;
+			height: 50px;
+			left: 0;
+			bottom: 0;
+			width: 320px;
+		}
+		.txt{
+			line-height:50px; 
+			height:50px;
+			font-size: 16px;
+			color: @colorWhite;
+			margin-left: 10px;
+		}
+		.icon{
+			float: right;
+			display: inline-block;
+			height: 50px;
+			line-height: 50px;
+			color: @colorWhite;
+			font-size: 18px;
+			margin-right: 10px;
+		}
+		&.c1{
+			left: 0;
+		}
+		&.c3{
+			right: 0;
+		}
+		&.c2{
+			left: 360px;
+		}
+	}
+}
+.product-wrapper{
+	font-size: 0;
+	padding-bottom: 35px;
+	.product{
+		margin-left: 40px;
+		margin-top: 50px;
+	}
+	.get-more-box{
+		margin-top: 50px;
+		text-align: center;
+		font-size: 14px;
+		.get-more{
+			display: inline-block;
+			width: 160px;
+			height: 38px;
+			line-height: 38px;
+			border:1px solid @colorGray;
+			color: @colorOrange;
+			border-radius: 20px;
+			.transition(200ms background-color);
+			&:hover{
+				background-color:@colorOrange;
+				color: @colorWhite;
+				border-color: @colorOrange;
+			};
+		}
+	}
+}
+.home-img-nav{
+	width: 1040px;
+	height: 540px;
+	position: relative;
+	margin: 85px auto 0;
+	.nav{
+		width: 80px;
+		height: 540px;
+		.link{
+			display: block;
+			text-align: center;
+			width: 78px;
+			height: 178px;
+			border:1px solid @colorBg;
+			background-color: @colorBg;
+			color: @colorGray;
+			&.on{
+				background-color: @colorWhite;
+				border-color: @colorBg;
+				color: @colorOrange;
+			}
+			.icon{
+				display: inline-block;
+				margin-top: 60px;
+				&:before{
+					display:inline-block;
+					margin-bottom: 15px;
+					width:80px;
+					font-size:35px;
+				};
+			}
+		}
+	}
+	.img-guide-box{
+		width: 860px;
+		height: 540px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		.guide{
+			padding:0;
+			width: 960px;
+			height: 540px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: none;
+			&.on{
+				display: block;
+			}
+			.big-pic{
+				position: absolute;
+				width: 640px;
+				height: 360px;
+				display: block;
+				left: 0;
+				top: 0;
+				.content{
+					position: absolute;
+					right: 40px;
+					top: 150px;
+					text-align: left;
+					width: 200px;
+					color: @colorWhite;
+					.title{
+						font-size: 36px;
+						display: block;
+					}
+					.desc{
+						font-size: 16px;
+					}
+				}
+			}
+			.small-pic{
+				position: absolute;
+				width: 320px;
+				height: 180px;
+				display: block;
+				.content{
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					text-align: right;
+					width: 300px;
+					height: 30px;
+					color: @colorWhite;
+					line-height: 30px;
+					background-color: rgba(0,0,0,0.3);
+					padding-right: 20px;
+				}
+				&.small-pic-one{
+					right: 0;
+					top: 0;
+				}
+				&.small-pic-two{
+					right: 0;
+					top: 180px;
+				}
+				&.small-pic-three{
+					right: 0;
+					bottom: 0;
+				}
+				&.small-pic-four{
+					right: 320px;
+					bottom: 0;
+				}
+				&.small-pic-five{
+					left: 0;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

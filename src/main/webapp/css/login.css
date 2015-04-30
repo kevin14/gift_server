@@ -1,0 +1,103 @@
+body {
+  background-color: #ffffff;
+}
+.header .login_logo {
+  display: block;
+  margin: 0 auto;
+}
+.login-wrapper {
+  overflow: hidden;
+  height: 830px;
+  background: url(../img/login_bg.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.login-wrapper.signin {
+  background: url(../img/signin_bg.jpg);
+}
+.login-wrapper.signin .login-box .form .block {
+  margin-top: 22px;
+}
+.login-wrapper .login-box {
+  width: 1120px;
+  height: 640px;
+  background-color: #ffffff;
+  margin: 60px auto;
+  overflow: hidden;
+  position: relative;
+  color: #95a8b1;
+}
+.login-wrapper .login-box .desc {
+  margin: 70px 0 0 105px;
+  color: #525a5e;
+}
+.login-wrapper .login-box .desc .title {
+  display: block;
+  font-size: 50px;
+  color: #f6442c;
+}
+.login-wrapper .login-box .desc .title .name {
+  vertical-align: -5px;
+  font-size: 54px;
+}
+.login-wrapper .login-box .desc .signin {
+  color: #f6442c;
+  display: inline-block;
+  margin: 45px 0;
+}
+.login-wrapper .login-box .desc .signin .icon {
+  font-size: 12px;
+}
+.login-wrapper .login-box .desc .info {
+  line-height: 40px;
+  font-size: 16px;
+}
+.login-wrapper .login-box .desc .info .get_more {
+  color: #f6442c;
+  text-decoration: underline;
+  margin-left: 20px;
+  font-size: 14px;
+}
+.login-wrapper .login-box .form {
+  position: absolute;
+  right: 171px;
+  top: 158px;
+}
+.login-wrapper .login-box .form .block {
+  margin-top: 30px;
+  display: block;
+  height: 40px;
+  width: 300px;
+  background-color: #ffffff;
+  text-indent: 5px;
+  border: 1px solid #f0f1f2;
+}
+.login-wrapper .login-box .form .info-btns {
+  margin-top: 30px;
+  font-size: 12px;
+}
+.login-wrapper .login-box .form .autologin {
+  margin-left: 5px;
+  display: inline-block;
+}
+.login-wrapper .login-box .form .forget {
+  color: #95a8b1;
+  float: right;
+}
+.login-wrapper .login-box .form .submit-btn {
+  width: 300px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  background-color: #f6442c;
+  margin-top: 100px;
+}
+.login-wrapper .login-box .form .submit-btn.sign-now {
+  margin-top: 30px;
+}
+.login-wrapper .login-box .form .submit-btn .icon {
+  font-size: 13px;
+}

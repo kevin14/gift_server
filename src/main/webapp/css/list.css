@@ -1,0 +1,185 @@
+.selector-nav {
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  line-height: 50px;
+}
+.selector-nav .li {
+  height: 50px;
+  top: 0;
+  display: block;
+  float: left;
+  text-align: center;
+  color: #95a8b1;
+  position: relative;
+  border-right: 2px solid #f0f4f5;
+  vertical-align: top;
+  cursor: pointer;
+}
+.selector-nav .li .ef-box {
+  display: none;
+}
+.selector-nav .li .ef-box.on {
+  display: block;
+}
+.selector-nav .li .icon-pulldown {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 10px;
+}
+.selector-nav .li.title {
+  width: 120px;
+}
+.selector-nav .li.price {
+  width: 200px;
+}
+.selector-nav .li.price .price-box {
+  display: block;
+}
+.selector-nav .li.price .price-box .real-price {
+  color: #f6442c;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.selector-nav .li.price .price-box.price1:hover {
+  color: #f6442c;
+}
+.selector-nav .li.price .price-box.price2 {
+  height: 0;
+  overflow: hidden;
+  margin-top: -3px;
+}
+.selector-nav .li.price .price-box.price2:hover .real-price {
+  color: #ffffff;
+}
+.selector-nav .li.price.on .price-box.price2 {
+  height: 50px;
+}
+.selector-nav .li.type {
+  width: 140px;
+}
+.selector-nav .li.type.li-content {
+  height: 40px;
+  line-height: 40px;
+}
+.selector-nav .li.score {
+  width: 170px;
+}
+.selector-nav .li.score .star-content .star-box {
+  display: inline-block;
+}
+.selector-nav .li.score .star-content .star-box .star {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  -webkit-transition: 200ms background-color;
+  transition: 200ms background-color;
+}
+.selector-nav .li.score .star-content .star-box.star-four .star5 {
+  color: #f0f1f2;
+}
+.selector-nav .li.score .star-content .star-box.star-three .star5 {
+  color: #f0f1f2;
+}
+.selector-nav .li.score .star-content .star-box.star-three .star4 {
+  color: #f0f1f2;
+}
+.selector-nav .li.score .star-content:hover .star-box .star {
+  color: #ffffff;
+}
+.selector-nav .li.score .star-content:hover .star-box.star-four .star5 {
+  color: #f6442c;
+}
+.selector-nav .li.score .star-content:hover .star-box.star-three .star5 {
+  color: #f6442c;
+}
+.selector-nav .li.score .star-content:hover .star-box.star-three .star4 {
+  color: #f6442c;
+}
+.selector-nav .li.tags {
+  width: 320px;
+}
+.selector-nav .li.tags .tags-box {
+  background-color: #ffffff;
+  text-align: left;
+}
+.selector-nav .li.tags .tags-box .tag {
+  text-align: center;
+  width: 110px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #f0f1f2;
+  color: #95a8b1;
+  display: inline-block;
+  line-height: 28px;
+  margin-left: 33px;
+  -webkit-transition: 200ms background-color;
+  transition: 200ms background-color;
+}
+.selector-nav .li.tags .tags-box .tag:hover {
+  background-color: #f6442c;
+  color: #ffffff;
+}
+.selector-nav .li .li-content {
+  height: 50px;
+  background-color: #ffffff;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+.selector-nav .li .li-content:hover {
+  background-color: #f6442c;
+  color: #ffffff;
+}
+.product-list {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding-bottom: 95px;
+  font-size: 0;
+}
+.product-list .product {
+  margin-left: 40px;
+  margin-top: 35px;
+}
+.pages {
+  height: 30px;
+  line-height: 30px;
+  color: #95a8b1;
+  border: 1px solid #f0f1f2;
+  float: right;
+  margin-top: 35px;
+  margin-right: 35px;
+  font-size: 0;
+}
+.pages li {
+  display: inline-block;
+  vertical-align: top;
+}
+.pages .page {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #95a8b1;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+.pages .page:hover {
+  color: #39c7ea;
+  background-color: #f0f4f5;
+}
+.pages .page.on {
+  color: #f6442c;
+  background-color: #f0f4f5;
+}
+.pages .page.icon {
+  font-size: 10px;
+}

@@ -1,0 +1,79 @@
+@import './lib/common.less';
+@import './lib/base.less';
+body{
+	background-color: @colorWhite;
+}
+
+.extract-wrapper{
+	overflow: hidden;
+	height: 760px;
+	background:url(../img/extract_bg.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	.extract-box{
+		width: 1120px;
+		height: 640px;
+		background-color: @colorWhite;
+		margin: 60px auto;
+		color: @colorOrange;
+		overflow: hidden;
+		position: relative;
+		.content{
+			margin: 95px 0 0 110px;
+		}
+		.title{
+			font-size: 36px;
+			display: block;
+		}
+		.code{
+			width: 340px;
+			height: 40px;
+			color: @colorWhite;
+			background-color: @colorOrange;
+			border:none;
+			text-indent: 20px;
+			margin-top: 40px;
+			outline: none;
+			&:-moz-placeholder {
+			    color: @colorWhite;  
+			}
+
+			&::-moz-placeholder {
+			    color: @colorWhite;
+			}
+
+			&:-ms-input-placeholder,
+			textarea:-ms-input-placeholder {
+			    color: @colorWhite;
+			}
+
+			&::-webkit-input-placeholder{
+			    color: @colorWhite;
+			}
+		}
+		.desc{
+			margin-top: 30px;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		.get{
+			display: block;
+			width: 140px;
+			height: 40px;
+			line-height: 40px;
+			color: @colorGray;
+			border:1px solid @colorFakeBlack;
+			text-align: center;
+			margin-top: 40px;
+			&:hover{
+				color:@colorOrange;
+				border-color: @colorOrange;
+			};
+		}
+		.gift-img{
+			position: absolute;
+			right: 158px;
+			top: 96px;
+		}
+	}
+}

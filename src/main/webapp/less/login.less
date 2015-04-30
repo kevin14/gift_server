@@ -1,0 +1,111 @@
+@import './lib/common.less';
+@import './lib/base.less';
+body{
+	background-color: @colorWhite;
+}
+.header{
+	.login_logo{
+		display: block;
+		margin: 0 auto;
+	}
+}
+.login-wrapper{
+	overflow: hidden;
+	height: 830px;
+	background:url(../img/login_bg.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	&.signin{
+		background:url(../img/signin_bg.jpg); 
+		.login-box{
+			.form{
+				.block{
+					margin-top: 22px;
+				}
+			}
+		}
+	}
+	.login-box{
+		width: 1120px;
+		height: 640px;
+		background-color: @colorWhite;
+		margin: 60px auto;
+		overflow: hidden;
+		position: relative;
+		color: @colorGray;
+		.desc{
+			margin: 70px 0 0 105px;
+			color: #525a5e;
+			.title{
+				display: block;
+				font-size: 50px;
+				color: @colorOrange;
+				.name{
+					vertical-align: -5px;
+					font-size: 54px;
+				}
+			}
+			.signin{
+				color: @colorOrange;
+				display: inline-block;
+				margin: 45px 0;
+				.icon{
+					font-size: 12px;
+				}
+			}
+			.info{
+				line-height: 40px;
+				font-size: 16px;
+				.get_more{
+					color: @colorOrange;
+					text-decoration: underline;
+					margin-left: 20px;
+					font-size: 14px;
+				}
+			}
+		}
+		.form{
+			position: absolute;
+			right: 171px;
+			top: 158px;
+			.block{
+				margin-top: 30px;
+				display: block;
+				height: 40px;
+				width: 300px;
+				background-color: @colorWhite;
+				text-indent: 5px;
+				border:1px solid @colorFakeBlack;
+			}
+			.info-btns{
+				margin-top: 30px;
+				font-size: 12px;
+			}
+			.autologin{
+				margin-left: 5px;
+				display: inline-block;
+			}
+			.forget{
+				color: @colorGray;
+				float: right;
+			}
+			.submit-btn{
+				width: 300px;
+				height: 40px;
+				display: block;
+				line-height: 40px;
+				text-align: center;
+				color: @colorWhite;
+				font-size: 18px;
+				background-color: @colorOrange;
+				margin-top: 100px;
+				&.sign-now{
+					margin-top: 30px;
+				}
+				.icon{
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}

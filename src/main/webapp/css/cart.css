@@ -1,0 +1,194 @@
+.cart-wrapper {
+  font-size: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  padding: 0 40px 40px;
+  width: 1040px;
+}
+.cart-wrapper .nav {
+  height: 80px;
+  border-bottom: 4px solid #f0f4f5;
+}
+.cart-wrapper .nav .link {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 80px;
+  color: #95a8b1;
+  margin-right: 40px;
+  height: 80px;
+}
+.cart-wrapper .nav .link .zoom {
+  font-size: 32px;
+  vertical-align: -3px;
+}
+.cart-wrapper .nav .link.on {
+  color: #525a5e;
+  border-bottom: 4px solid #f6442c;
+}
+.cart-wrapper .nav .link.on .zoom {
+  color: #f6442c;
+}
+.cart-wrapper .nav .title {
+  display: inline-block;
+  float: right;
+  color: #f6442c;
+  font-size: 30px;
+  line-height: 80px;
+}
+.cart-wrapper .cart-product-list {
+  text-align: justify;
+  font-size: 0;
+}
+.cart-wrapper .cart-product-list .cart-detail {
+  display: inline-block;
+  width: 480px;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #f0f4f5;
+  margin-top: 20px;
+  position: relative;
+}
+.cart-wrapper .cart-product-list .cart-detail:hover {
+  background-color: #f0f4f5;
+}
+.cart-wrapper .cart-product-list .cart-detail .product-name {
+  position: absolute;
+  left: 180px;
+}
+.cart-wrapper .cart-product-list .cart-detail .product-image {
+  width: 160px;
+  height: 90px;
+  display: inline-block;
+}
+.cart-wrapper .cart-product-list .cart-detail .btn-box {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 24px;
+  overflow: hidden;
+  -webkit-transition: 300ms width;
+  transition: 300ms width;
+}
+.cart-wrapper .cart-product-list .cart-detail .btn-box a {
+  display: block;
+  background-color: #ffffff;
+  word-break: keep-all;
+  height: 24px;
+  overflow: hidden;
+  line-height: 24px;
+  margin-bottom: 9px;
+  color: #525a5e;
+}
+.cart-wrapper .cart-product-list .cart-detail .btn-box:hover {
+  width: 110px;
+}
+.cart-wrapper .cart-product-list:after {
+  height: 1px;
+  width: 1000px;
+  content: '';
+  display: inline-block;
+}
+.selected-product-wrapper {
+  background-color: #f6442c;
+  padding: 20px 40px 0;
+  width: 1040px;
+}
+.selected-product-wrapper .product-box {
+  border-bottom: 2px solid #ffffff;
+  font-size: 0;
+  text-align: justify;
+}
+.selected-product-wrapper .product-box:after {
+  height: 1px;
+  width: 1000px;
+  content: '';
+  display: inline-block;
+}
+.selected-product-wrapper .product-box .selected-product {
+  padding: 10px 0;
+  position: relative;
+  display: inline-block;
+  width: 142px;
+  font-size: 12px;
+}
+.selected-product-wrapper .product-box .selected-product .img-box {
+  height: 86px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.selected-product-wrapper .product-box .selected-product .img-box img {
+  width: 128px;
+  height: 72px;
+  display: block;
+  border: 7px solid #ffffff;
+}
+.selected-product-wrapper .product-box .selected-product .product-name {
+  text-align: center;
+  color: #ffffff;
+  margin: 10px 0;
+}
+.selected-product-wrapper .product-box .selected-product .delete {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: none;
+  text-align: center;
+  line-height: 24px;
+  right: -12px;
+  top: -8px;
+  border-radius: 13px;
+  background-color: #ffffff;
+  border: 1px solid #f6442c;
+}
+.selected-product-wrapper .product-box .selected-product.hasSelected:hover .delete {
+  display: block;
+}
+.selected-product-wrapper.fix {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -560px;
+}
+.space-selected-products {
+  height: 161px;
+}
+.space-notice {
+  height: 60px;
+}
+.selected-notice-wrapper {
+  background-color: #f6442c;
+  padding: 10px 40px;
+  height: 40px;
+  width: 1040px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.selected-notice-wrapper .toggle {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-color: #ffffff;
+  vertical-align: -4px;
+}
+.selected-notice-wrapper .zoom {
+  font-size: 32px;
+}
+.selected-notice-wrapper .deal {
+  float: right;
+  height: 40px;
+  width: 180px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  color: #525a5e;
+  letter-spacing: 20px;
+  text-indent: 10px;
+}
+.selected-notice-wrapper.fix {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -560px;
+}

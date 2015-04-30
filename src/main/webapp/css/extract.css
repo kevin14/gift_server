@@ -1,0 +1,73 @@
+body {
+  background-color: #ffffff;
+}
+.extract-wrapper {
+  overflow: hidden;
+  height: 760px;
+  background: url(../img/extract_bg.jpg);
+  background-position: center;
+  background-size: 100% 100%;
+}
+.extract-wrapper .extract-box {
+  width: 1120px;
+  height: 640px;
+  background-color: #ffffff;
+  margin: 60px auto;
+  color: #f6442c;
+  overflow: hidden;
+  position: relative;
+}
+.extract-wrapper .extract-box .content {
+  margin: 95px 0 0 110px;
+}
+.extract-wrapper .extract-box .title {
+  font-size: 36px;
+  display: block;
+}
+.extract-wrapper .extract-box .code {
+  width: 340px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #f6442c;
+  border: none;
+  text-indent: 20px;
+  margin-top: 40px;
+  outline: none;
+}
+.extract-wrapper .extract-box .code:-moz-placeholder {
+  color: #ffffff;
+}
+.extract-wrapper .extract-box .code::-moz-placeholder {
+  color: #ffffff;
+}
+.extract-wrapper .extract-box .code:-ms-input-placeholder,
+.extract-wrapper .extract-box .code textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+.extract-wrapper .extract-box .code::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.extract-wrapper .extract-box .desc {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.extract-wrapper .extract-box .get {
+  display: block;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  color: #95a8b1;
+  border: 1px solid #f0f1f2;
+  text-align: center;
+  margin-top: 40px;
+}
+.extract-wrapper .extract-box .get:hover {
+  color: #f6442c;
+  border-color: #f6442c;
+}
+.extract-wrapper .extract-box .gift-img {
+  position: absolute;
+  right: 158px;
+  top: 96px;
+}
