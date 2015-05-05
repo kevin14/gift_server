@@ -4,10 +4,11 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://120.24.226.153:3306/giftBox</property>
-    <property name="connection.username">gift</property>
-    <property name="connection.password">gift</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://120.24.226.153:3306/giftBox</property>
+    <property name="hibernate.connection.username">gift</property>
+    <property name="hibernate.connection.password">gift</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
       <mapping class="com.springapp.entity.GbtbCartEntity"/>
       <mapping class="com.springapp.entity.GbtbCodeEntity"/>
       <mapping class="com.springapp.entity.GbtbFavoriteEntity"/>

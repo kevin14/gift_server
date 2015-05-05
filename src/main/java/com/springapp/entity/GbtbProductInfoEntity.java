@@ -9,7 +9,7 @@ import java.sql.Timestamp;
  * Created by kevin14 on 15/4/28.
  */
 @Entity
-@javax.persistence.Table(name = "gbtb_product_info", schema = "", catalog = "giftbox")
+@javax.persistence.Table(name = "gbtb_product_info", schema = "", catalog = "giftBox")
 public class GbtbProductInfoEntity {
     private int id;
 
