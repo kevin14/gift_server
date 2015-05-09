@@ -20,6 +20,7 @@
         <url-pattern>/less/*</url-pattern>
         <url-pattern>/sound/*</url-pattern>
         <url-pattern>/tpl/*</url-pattern>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
 	<servlet-mapping>
