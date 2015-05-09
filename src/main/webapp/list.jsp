@@ -179,12 +179,12 @@
             <c:forEach items="${list}" var="record" varStatus="s">
                 <div class="product">
                     <div class="img-box">
-                        <a href="#" class="notice">了解详情</a>
+                        <a href="./detail?pid=${record.id}" class="notice">了解详情</a>
                         <img src="./i/384x216/01.jpg" alt="" class="img">
                     </div>
                     <div class="content">
                         <a href="#" class="title">${record.productName}</a>
-                        <span class="info"><span class="count">48</span>人购买</span>
+                        <span class="info"><span class="count">${record.productPick}</span>人购买</span>
                     </div>
                 </div>
             </c:forEach>

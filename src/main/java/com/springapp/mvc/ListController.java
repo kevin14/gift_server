@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Service
-@RequestMapping("/list.io")
+@RequestMapping("/list*")
 public class ListController {
 
     @Autowired
