@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <!-- 配置邮件系统-->
+       <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+              <property name="host" value="smtp.qq.com" />
+              <property name="username" value="371081215@qq.com" />
+              <property name="password" value="zzyzsd1qaz3edc" />
+              <property name="javaMailProperties">
+                     <props>
+                            <prop key="mail.smtp.auth">true</prop>
+                            <prop key="mail.smtp.timeout">25000</prop>
+                            <prop key="mail.smtp.port">25</prop>
+                            <prop key="mail.smtp.socketFactory.fallback">false</prop>
+                            <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                     </props>
+              </property>
+       </bean>
+</beans>
