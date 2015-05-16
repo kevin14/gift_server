@@ -38,7 +38,7 @@ public class HomeController {
             GbtbUserInfoEntity user = userDao.getUserByToken(tokenCookie.getValue());
 
             if (null == user) {
-                // TODO 获取失败，报错
+                // TODO 数据库连接失败
             } else {
                 // 更新登录信息
                 model.addAttribute("user", user);

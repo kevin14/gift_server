@@ -11,4 +11,10 @@ public interface UserDao {
 
     // 根据token查找用户
     public GbtbUserInfoEntity getUserByToken(String token);
+
+    // 查询手机号是否已被注册
+    public Integer getUserByPhone(String phone);
+
+    // 注册新用户
+    public Integer signIn(GbtbUserInfoEntity userInfoEntity);
 }

@@ -5,6 +5,7 @@ import com.springapp.entity.GbtbUserInfoEntity;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Component;
 
@@ -41,5 +42,43 @@ public class UserDaoImpl extends GeneralDaoImpl implements UserDao {
         } finally {
             session.close();
         }
+    }
+
+    @Override
+    public Integer getUserByPhone(String phone) {
+
+        Session session = getSession();
+
+        Query q = session.createQuery("select count(*) as n from GbtbUserInfoEntity where loginId = :loginId");
+
+        q.setParameter("loginId", phone);
+
+        try {
+
+            return Integer.parseInt(String.valueOf(q.list().get(0)));
+
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public Integer signIn(GbtbUserInfoEntity userInfoEntity) {
+
+        Session session = getSession();
+
+        Transaction tran = session.beginTransaction();
+
+        try {
+
+            session.save(userInfoEntity);
+
+        } finally {
+
+            tran.commit();
+            session.close();
+        }
+
+        return userInfoEntity.getId();
     }
 }
