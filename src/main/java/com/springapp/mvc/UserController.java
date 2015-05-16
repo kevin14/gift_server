@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import com.springapp.common.CONST;
 import com.springapp.common.MD5Util;
 import com.springapp.dao.UserDao;
 import com.springapp.entity.GbtbUserInfoEntity;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +24,7 @@ import java.util.ResourceBundle;
  * Created by zhuoyangzong on 15/5/16.
  */
 @Service
-@RequestMapping("/signin")
+@RequestMapping("")
 public class UserController {
 
     @Autowired
@@ -31,8 +33,18 @@ public class UserController {
     @Autowired
     HttpServletRequest request;
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String signin(ModelMap model, HttpServletResponse response) {
+    @RequestMapping(value = "/signin", method = RequestMethod.GET)
+    public String signIn(ModelMap model) {
+        return "signin";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String logIn(ModelMap model) {
+        return "login";
+    }
+
+    @RequestMapping(value = "/signin", method = RequestMethod.POST)
+    public String signIn(ModelMap model, HttpServletResponse response) {
 
         // 获取注册信息
         String phone = request.getParameter("phone");
@@ -47,7 +59,7 @@ public class UserController {
 
         if (0 != count) {
             // TODO 手机号已被注册
-            return "warning";
+            return "redirect:home";
         } else {
             GbtbUserInfoEntity userInfoEntity = new GbtbUserInfoEntity();
             userInfoEntity.setLoginId(phone);
@@ -61,12 +73,41 @@ public class UserController {
             userInfoEntity.setCreateAt(new Timestamp(new Date().getTime()));
             userInfoEntity.setUpdateAt(new Timestamp(new Date().getTime()));
 
-            userDao.signIn(userInfoEntity);
+            if (CONST.DB_ERROR != userDao.signIn(userInfoEntity)) {
 
-            Cookie cookie = new Cookie("userToken", token);
+                // 注册成功，把生成的token写入cookie，并跳转首页
+                Cookie cookie = new Cookie(CONST.USER_TOKEN, token);
+                response.addCookie(cookie);
+
+                return "redirect:home";
+            } else {
+                // TODO 数据路连接失败
+                return "error";
+            }
+        }
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String logIn(ModelMap model, HttpServletResponse response) {
+
+        // 获取登录信息
+        String phone = request.getParameter("phone");
+        String pwd = request.getParameter("password");
+
+        String token = userDao.login(phone, pwd);
+
+        if (null == token) {
+            // TODO 数据路连接失败
+            return "error";
+        } else if ("".equals(token)) {
+            // TODO 用户名或密码错误
+            return "warning";
+        } else {
+            // 登录成功，把生成的token写入cookie，并跳转首页
+            Cookie cookie = new Cookie(CONST.USER_TOKEN, token);
             response.addCookie(cookie);
 
-            return "home";
+            return "redirect:home";
         }
     }
 }

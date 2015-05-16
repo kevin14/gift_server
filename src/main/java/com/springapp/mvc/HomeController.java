@@ -1,5 +1,6 @@
 package com.springapp.mvc;
 
+import com.springapp.common.CONST;
 import com.springapp.common.CookieUtil;
 import com.springapp.dao.UserDao;
 import com.springapp.entity.GbtbProductInfoEntity;
@@ -32,7 +33,7 @@ public class HomeController {
 
         // TODO 提取成共同方法，获取用户
         // 获取登录信息
-        Cookie tokenCookie = CookieUtil.getCookieByName(request, "userToken");
+        Cookie tokenCookie = CookieUtil.getCookieByName(request, CONST.USER_TOKEN);
         // 根据token获取用户信息
         if (null != tokenCookie) {
             GbtbUserInfoEntity user = userDao.getUserByToken(tokenCookie.getValue());

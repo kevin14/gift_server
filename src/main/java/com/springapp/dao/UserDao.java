@@ -17,4 +17,7 @@ public interface UserDao {
 
     // 注册新用户
     public Integer signIn(GbtbUserInfoEntity userInfoEntity);
+
+    // 用户登录
+    public String login(String phone, String pwd);
 }

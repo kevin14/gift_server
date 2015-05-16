@@ -1,5 +1,6 @@
 package com.springapp.dao;
 
+import com.springapp.common.CONST;
 import com.springapp.entity.GbtbProductInfoEntity;
 import com.springapp.entity.GbtbUserInfoEntity;
 import org.hibernate.Criteria;
@@ -33,11 +34,13 @@ public class UserDaoImpl extends GeneralDaoImpl implements UserDao {
 
             result = cr.list();
 
-            if (result.size() > 0) {
-                return result.get(0);
-            } else {
-                return null;
-            }
+            return result.get(0);
+
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            e.printStackTrace();
+            return null;
 
         } finally {
             session.close();
@@ -57,6 +60,12 @@ public class UserDaoImpl extends GeneralDaoImpl implements UserDao {
 
             return Integer.parseInt(String.valueOf(q.list().get(0)));
 
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            e.printStackTrace();
+            return CONST.DB_ERROR;
+
         } finally {
             session.close();
         }
@@ -73,12 +82,55 @@ public class UserDaoImpl extends GeneralDaoImpl implements UserDao {
 
             session.save(userInfoEntity);
 
+            tran.commit();
+
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            tran.rollback();
+            e.printStackTrace();
+            return CONST.DB_ERROR;
+
         } finally {
 
-            tran.commit();
             session.close();
         }
 
         return userInfoEntity.getId();
+    }
+
+    @Override
+    public String login(String phone, String pwd) {
+
+        Session session = getSession();
+
+        Query q = session.createQuery("from GbtbUserInfoEntity where loginId = :loginId and loginPwd = :loginPwd");
+
+        q.setParameter("loginId", phone);
+        q.setParameter("loginPwd", pwd);
+
+        List<GbtbUserInfoEntity> result = new ArrayList<GbtbUserInfoEntity>();
+
+        try {
+
+            result = q.list();
+
+            if (result.size() == 0) {
+                // 用户不存在
+                return "";
+            } else {
+                // 返回用户token
+                return result.get(0).getLoginToken();
+            }
+
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            e.printStackTrace();
+            return null;
+
+        } finally {
+            session.close();
+        }
     }
 }
