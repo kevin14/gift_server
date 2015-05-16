@@ -10,7 +10,7 @@ import java.util.Arrays;
  * Created by kevin14 on 15/4/28.
  */
 @Entity
-@javax.persistence.Table(name = "gbtb_trade_record", schema = "", catalog = "giftbox")
+@javax.persistence.Table(name = "gbtb_trade_record", schema = "", catalog = "giftBox")
 public class GbtbTradeRecordEntity {
     private int id;
 

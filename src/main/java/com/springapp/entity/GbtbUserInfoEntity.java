@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Created by kevin14 on 15/4/28.
  */
 @Entity
-@Table(name = "gbtb_user_info", schema = "", catalog = "giftbox")
+@Table(name = "gbtb_user_info", schema = "", catalog = "giftBox")
 public class GbtbUserInfoEntity {
     private int id;
     private String loginId;

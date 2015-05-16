@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  * Created by kevin14 on 15/4/28.
  */
 @Entity
-@Table(name = "gbtb_favorite", schema = "", catalog = "giftbox")
+@Table(name = "gbtb_favorite", schema = "", catalog = "giftBox")
 public class GbtbFavoriteEntity {
     private int id;
     private Integer userId;
