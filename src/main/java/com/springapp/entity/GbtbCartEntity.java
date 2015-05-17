@@ -17,7 +17,8 @@ public class GbtbCartEntity {
     private Timestamp updateAt;
 
     @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     public int getId() {
         return id;
     }

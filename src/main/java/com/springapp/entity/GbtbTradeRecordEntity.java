@@ -1,8 +1,6 @@
 package com.springapp.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Arrays;
 
@@ -15,7 +13,8 @@ public class GbtbTradeRecordEntity {
     private int id;
 
     @Id
-    @javax.persistence.Column(name = "id", nullable = false, insertable = true, updatable = true)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
