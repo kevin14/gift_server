@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by zhuoyangzong on 15/5/16.
  */
 @Service
-@RequestMapping("/home*")
+@RequestMapping("")
 public class HomeController {
 
     @Autowired
@@ -28,8 +28,8 @@ public class HomeController {
     @Autowired
     HttpServletRequest request;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String home(ModelMap model, HttpServletResponse response) {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String welcome(ModelMap model, HttpServletResponse response) {
 
         // TODO 提取成共同方法，获取用户
         // 获取登录信息
@@ -48,7 +48,7 @@ public class HomeController {
 
 
 
-        System.out.println(CookieUtil.getCookieByName(request, "userToken").getValue());
+        //System.out.println("run");
 
         //Integer pid = Integer.parseInt(request.getParameter("pid"));
 
@@ -61,5 +61,10 @@ public class HomeController {
         //response.addCookie(cookie);
 
         return "home";
+    }
+
+    @RequestMapping(value = "/home*", method = RequestMethod.GET)
+    public String home(ModelMap model, HttpServletResponse response) {
+        return welcome(model, response);
     }
 }

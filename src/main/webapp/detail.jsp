@@ -156,7 +156,7 @@
 					<span class="icon icon-star_slim"></span>
 					<span class="text">加入我的收藏</span>
 				</a>
-				<a href="#" class="buy-btn btn">
+				<a href="javascript:addToCart();" class="buy-btn btn">
 					<span class="icon icon-cart_slim"></span>
 					<span class="text">加入购物车</span>
 				</a>
@@ -615,6 +615,7 @@
 		</div>
 	</div>
 </body>
+<script src="./js/lib/jquery-1.11.2.min.js"></script>
 <script data-main="./js/home" src="./js/lib/require.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/detail.js"></script>
 </html>
