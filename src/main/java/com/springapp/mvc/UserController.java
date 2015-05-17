@@ -9,10 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Timestamp;
@@ -40,6 +38,13 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String logIn(ModelMap model) {
+
+        // 判断来源
+        String redirect = request.getParameter("redirect");
+
+        if (redirect != null && redirect.length() > 0) {
+            model.addAttribute("redirect", redirect);
+        }
         return "login";
     }
 
@@ -87,7 +92,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login*", method = RequestMethod.POST)
     public String logIn(ModelMap model, HttpServletResponse response) {
 
         // 获取登录信息
@@ -107,7 +112,16 @@ public class UserController {
             Cookie cookie = new Cookie(CONST.USER_TOKEN, token);
             response.addCookie(cookie);
 
-            return "redirect:home";
+            // 判断来源
+            String redirect = request.getParameter("redirect");
+
+            if (null != redirect && redirect.length() > 0) {
+
+                return "redirect:" + redirect;
+            } else {
+
+                return "redirect:home";
+            }
         }
     }
 }

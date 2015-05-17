@@ -2,9 +2,13 @@ package com.springapp.dao;
 
 import com.springapp.common.CONST;
 import com.springapp.entity.GbtbCartEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import com.springapp.entity.GbtbProductInfoEntity;
+import org.hibernate.*;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by zhuoyangzong on 15/5/17.
@@ -38,5 +42,34 @@ public class CartDaoImpl extends GeneralDaoImpl implements CartDao {
         }
 
         return cartEntity.getId();
+    }
+
+    @Override
+    public List<GbtbCartEntity> getCartList(Integer userId, Integer price) {
+
+        Session session = getSession();
+
+        try {
+
+            List<GbtbCartEntity> result = new ArrayList<GbtbCartEntity>();
+
+            SQLQuery q = session.createSQLQuery("select * from gbtb_cart c inner join gbtb_product_info p on (c.product_id = p.id and p.product_price = :price) where c.user_id = :userId");
+
+            q.setParameter("price", price);
+            q.setParameter("userId", userId);
+
+            result = q.addEntity(GbtbCartEntity.class).list();
+
+            return result;
+
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            e.printStackTrace();
+            return null;
+
+        } finally {
+            session.close();
+        }
     }
 }

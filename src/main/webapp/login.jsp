@@ -39,6 +39,7 @@
         </div>
         <button type="submit" class="sign-now submit-btn">立即登录</button>
         <!-- <a href="#" class="login-now submit-btn">立即登录 <span class="icon-arow_right icon"></span></a> -->
+        <input type="hidden" name="redirect" value="${redirect}">
       </form>
     </div>
   </div>
