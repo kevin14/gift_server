@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="utf-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -103,10 +104,10 @@
   <div class="wrapper cart-wrapper">
     <div class="nav">
       <a href="javascript:;" class="link on">
-        <span class="zoom">399</span> 元购物车 <span class="zoom">12</span> 件
+        <span class="zoom">399</span> 元购物车 <span class="zoom">${fn:length(cart1)}</span> 件
       </a>
       <a href="javascript:;" class="link">
-        <span class="zoom">699</span> 元购物车 <span class="zoom">12</span> 件
+        <span class="zoom">699</span> 元购物车 <span class="zoom">${fn:length(cart2)}</span> 件
       </a>
       <span class="title">我的购物车</span>
     </div>
