@@ -15,7 +15,7 @@ public class GbtbUserInfoEntity {
     private String userName;
     private String loginPwd;
     private String loginToken;
-    private byte[] cell;
+    private String cell;
     private String email;
     private String contactOther;
     private String headPortrait;
@@ -75,11 +75,11 @@ public class GbtbUserInfoEntity {
 
     @Basic
     @Column(name = "cell", nullable = true, insertable = true, updatable = true)
-    public byte[] getCell() {
+    public String getCell() {
         return cell;
     }
 
-    public void setCell(byte[] cell) {
+    public void setCell(String cell) {
         this.cell = cell;
     }
 
@@ -145,7 +145,6 @@ public class GbtbUserInfoEntity {
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
         if (loginPwd != null ? !loginPwd.equals(that.loginPwd) : that.loginPwd != null) return false;
         if (loginToken != null ? !loginToken.equals(that.loginToken) : that.loginToken != null) return false;
-        if (!Arrays.equals(cell, that.cell)) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
         if (contactOther != null ? !contactOther.equals(that.contactOther) : that.contactOther != null) return false;
         if (headPortrait != null ? !headPortrait.equals(that.headPortrait) : that.headPortrait != null) return false;
@@ -162,7 +161,6 @@ public class GbtbUserInfoEntity {
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (loginPwd != null ? loginPwd.hashCode() : 0);
         result = 31 * result + (loginToken != null ? loginToken.hashCode() : 0);
-        result = 31 * result + (cell != null ? Arrays.hashCode(cell) : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (contactOther != null ? contactOther.hashCode() : 0);
         result = 31 * result + (headPortrait != null ? headPortrait.hashCode() : 0);

@@ -23,27 +23,27 @@ public class GbtbTradeRecordEntity {
         this.id = id;
     }
 
-    private Integer recordId;
+    private String recordId;
 
     @Basic
     @javax.persistence.Column(name = "record_id", nullable = true, insertable = true, updatable = true)
-    public Integer getRecordId() {
+    public String getRecordId() {
         return recordId;
     }
 
-    public void setRecordId(Integer recordId) {
+    public void setRecordId(String recordId) {
         this.recordId = recordId;
     }
 
-    private Integer fetchCode;
+    private String fetchCode;
 
     @Basic
     @javax.persistence.Column(name = "fetch_code", nullable = true, insertable = true, updatable = true)
-    public Integer getFetchCode() {
+    public String getFetchCode() {
         return fetchCode;
     }
 
-    public void setFetchCode(Integer fetchCode) {
+    public void setFetchCode(String fetchCode) {
         this.fetchCode = fetchCode;
     }
 
@@ -191,15 +191,15 @@ public class GbtbTradeRecordEntity {
         this.giverName = giverName;
     }
 
-    private byte[] giverCell;
+    private String giverCell;
 
     @Basic
     @javax.persistence.Column(name = "giver_cell", nullable = true, insertable = true, updatable = true)
-    public byte[] getGiverCell() {
+    public String getGiverCell() {
         return giverCell;
     }
 
-    public void setGiverCell(byte[] giverCell) {
+    public void setGiverCell(String giverCell) {
         this.giverCell = giverCell;
     }
 
@@ -227,15 +227,15 @@ public class GbtbTradeRecordEntity {
         this.recevierName = recevierName;
     }
 
-    private byte[] receiverCell;
+    private String receiverCell;
 
     @Basic
     @javax.persistence.Column(name = "receiver_cell", nullable = true, insertable = true, updatable = true)
-    public byte[] getReceiverCell() {
+    public String getReceiverCell() {
         return receiverCell;
     }
 
-    public void setReceiverCell(byte[] receiverCell) {
+    public void setReceiverCell(String receiverCell) {
         this.receiverCell = receiverCell;
     }
 
@@ -322,10 +322,8 @@ public class GbtbTradeRecordEntity {
         if (productChoose != null ? !productChoose.equals(that.productChoose) : that.productChoose != null)
             return false;
         if (giverName != null ? !giverName.equals(that.giverName) : that.giverName != null) return false;
-        if (!Arrays.equals(giverCell, that.giverCell)) return false;
         if (giverEmail != null ? !giverEmail.equals(that.giverEmail) : that.giverEmail != null) return false;
         if (recevierName != null ? !recevierName.equals(that.recevierName) : that.recevierName != null) return false;
-        if (!Arrays.equals(receiverCell, that.receiverCell)) return false;
         if (receiverEmail != null ? !receiverEmail.equals(that.receiverEmail) : that.receiverEmail != null)
             return false;
         if (orderComment != null ? !orderComment.equals(that.orderComment) : that.orderComment != null) return false;
@@ -353,10 +351,8 @@ public class GbtbTradeRecordEntity {
         result = 31 * result + (productId6 != null ? productId6.hashCode() : 0);
         result = 31 * result + (productChoose != null ? productChoose.hashCode() : 0);
         result = 31 * result + (giverName != null ? giverName.hashCode() : 0);
-        result = 31 * result + (giverCell != null ? Arrays.hashCode(giverCell) : 0);
         result = 31 * result + (giverEmail != null ? giverEmail.hashCode() : 0);
         result = 31 * result + (recevierName != null ? recevierName.hashCode() : 0);
-        result = 31 * result + (receiverCell != null ? Arrays.hashCode(receiverCell) : 0);
         result = 31 * result + (receiverEmail != null ? receiverEmail.hashCode() : 0);
         result = 31 * result + (orderComment != null ? orderComment.hashCode() : 0);
         result = 31 * result + (orderExpire != null ? orderExpire.hashCode() : 0);

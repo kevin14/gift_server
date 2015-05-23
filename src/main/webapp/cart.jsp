@@ -223,6 +223,7 @@
       </div>
     </div>
   </div>
+  <form class="form" action="./order" method="POST">
   <div class="wrapper space-selected-products">
     <div class="selected-product-wrapper">
       <div class="product-box">
@@ -232,36 +233,42 @@
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
           <a href="javascript:;" class="delete"></a>
+          <input type="hidden" name="product1" value="1">
         </div>
         <div class="selected-product">
           <div class="img-box">
             
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
+			<input type="hidden" name="product2" value="2">
         </div>
         <div class="selected-product">
           <div class="img-box">
             
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
+			<input type="hidden" name="product3" value="3">
         </div>
         <div class="selected-product">
           <div class="img-box">
             
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
+			<input type="hidden" name="product4" value="4">
         </div>
         <div class="selected-product">
           <div class="img-box">
             
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
+			<input type="hidden" name="product5" value="5">
         </div>
         <div class="selected-product">
           <div class="img-box">
             
           </div>
           <p class="product-name">请挑选您心仪的礼品</p>
+			<input type="hidden" name="product6" value="6">
         </div>
       </div>
     </div>
@@ -273,6 +280,7 @@
       <a href="javascript:;" class="deal">结算</a>
     </div>
   </div>
+  </form>
   <div class="footer">
     <div class="content-wrapper">
       <span class="number">客服电话</span>
