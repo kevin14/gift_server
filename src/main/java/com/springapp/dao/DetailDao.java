@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface DetailDao {
 
-    public GbtbProductInfoEntity getProductDetail(Integer pid);
+    GbtbProductInfoEntity getProductDetail(Integer pid);
 }

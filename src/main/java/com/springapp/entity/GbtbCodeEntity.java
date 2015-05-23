@@ -12,7 +12,7 @@ public class GbtbCodeEntity {
     private int id;
     private String codeName;
     private String codeValue;
-    private String codeCatagory;
+    private String codeDesc;
     private Timestamp createAt;
     private Timestamp updateAt;
 
@@ -48,13 +48,13 @@ public class GbtbCodeEntity {
     }
 
     @Basic
-    @Column(name = "code_catagory", nullable = true, insertable = true, updatable = true, length = 10)
-    public String getCodeCatagory() {
-        return codeCatagory;
+    @Column(name = "code_desc", nullable = true, insertable = true, updatable = true, length = 10)
+    public String getCodeDesc() {
+        return codeDesc;
     }
 
-    public void setCodeCatagory(String codeCatagory) {
-        this.codeCatagory = codeCatagory;
+    public void setCodeDesc(String codeDesc) {
+        this.codeDesc = codeDesc;
     }
 
     @Basic
@@ -87,7 +87,6 @@ public class GbtbCodeEntity {
         if (id != that.id) return false;
         if (codeName != null ? !codeName.equals(that.codeName) : that.codeName != null) return false;
         if (codeValue != null ? !codeValue.equals(that.codeValue) : that.codeValue != null) return false;
-        if (codeCatagory != null ? !codeCatagory.equals(that.codeCatagory) : that.codeCatagory != null) return false;
         if (createAt != null ? !createAt.equals(that.createAt) : that.createAt != null) return false;
         if (updateAt != null ? !updateAt.equals(that.updateAt) : that.updateAt != null) return false;
 
@@ -99,7 +98,6 @@ public class GbtbCodeEntity {
         int result = id;
         result = 31 * result + (codeName != null ? codeName.hashCode() : 0);
         result = 31 * result + (codeValue != null ? codeValue.hashCode() : 0);
-        result = 31 * result + (codeCatagory != null ? codeCatagory.hashCode() : 0);
         result = 31 * result + (createAt != null ? createAt.hashCode() : 0);
         result = 31 * result + (updateAt != null ? updateAt.hashCode() : 0);
         return result;

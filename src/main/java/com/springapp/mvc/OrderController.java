@@ -76,6 +76,7 @@ public class OrderController {
                 } else {
 
                     // TODO 跳转支付
+                    model.addAttribute("recordId", String.valueOf(ts.getTime()));
                     return "pay";
                 }
             }

@@ -12,8 +12,8 @@ import java.util.List;
 public interface CartDao {
 
     // 插入购物车
-    public Integer addToCart(GbtbCartEntity cartEntity);
+    Integer addToCart(GbtbCartEntity cartEntity);
 
     // 根据用户和价位获取购物车列
-    public List<GbtbCartEntity> getCartList(Integer userId, Integer price);
+    List<GbtbCartEntity> getCartList(Integer userId, Integer price);
 }

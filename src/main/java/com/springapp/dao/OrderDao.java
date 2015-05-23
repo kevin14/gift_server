@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface OrderDao {
 
     // 创建订单
-    public Integer createOrder(GbtbTradeRecordEntity tradeRecordEntity);
+    Integer createOrder(GbtbTradeRecordEntity tradeRecordEntity);
 }

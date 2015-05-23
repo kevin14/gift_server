@@ -19,4 +19,11 @@ public class CONST {
     public static final String ORDER_COMPLETE = "03";
     public static final String ORDER_CANCEL = "04";
 
+    // 一页最大显示数量
+    public static final int PAGESIZE = 15;
+
+    // code大分类
+    public static final String REGION = "01";
+    public static final String CATEGORY = "02";
+
 }

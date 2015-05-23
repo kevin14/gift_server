@@ -19,12 +19,12 @@
             <div class="area-box">
                 送给
                 <div class="picker">
-                    上海<span class="icon-pulldown"></span>
+                    ${sessionScope.regionList[0].codeDesc}<span class="icon-pulldown"></span>
                     <ul class="city-list">
                         <li>
-                            <a href="javascript:;">北京</a>
-                            <a href="javascript:;">广州</a>
-                            <a href="javascript:;">重庆</a>
+                            <c:forEach items="${sessionScope.regionList}" var="region" varStatus="s">
+                                    <a href="javascript:;">${region.codeDesc}</a>
+                            </c:forEach>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="user-box">
                 <!-- 登录 -->
-                <img class="avatar" src="./img/avater_32.jpg"></img>
+                <img class="avatar" src="./img/avater_32.jpg"/>
                 <span class="user-count">2</span>
                 <ul class="user-content">
                     <li>
@@ -166,16 +166,6 @@
             </div>
         </div>
         <div class="product-list">
-            <div class="product">
-                <div class="img-box">
-                    <a href="#" class="notice">了解详情</a>
-                    <img src="./i/384x216/01.jpg" alt="" class="img">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">这里是礼品的名字啊</a>
-                    <span class="info"><span class="count">48</span>人购买</span>
-                </div>
-            </div>
             <c:forEach items="${list}" var="record" varStatus="s">
                 <div class="product">
                     <div class="img-box">

@@ -364,7 +364,7 @@
             </div>
 
             <div class="get-more-box">
-                <a href="./list" class="get-more">更多礼品</a>
+                <a href="./list?price=399" class="get-more">更多礼品</a>
             </div>
 
         </div>
