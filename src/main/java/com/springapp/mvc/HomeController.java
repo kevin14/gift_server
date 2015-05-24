@@ -3,7 +3,6 @@ package com.springapp.mvc;
 import com.springapp.common.CONST;
 import com.springapp.common.CookieUtil;
 import com.springapp.dao.UserDao;
-import com.springapp.entity.GbtbProductInfoEntity;
 import com.springapp.entity.GbtbUserInfoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,20 +44,6 @@ public class HomeController {
                 model.addAttribute("user", user);
             }
         }
-
-
-
-        //System.out.println("run");
-
-        //Integer pid = Integer.parseInt(request.getParameter("pid"));
-
-        //GbtbProductInfoEntity productDetail = detailDao.getProductDetail(pid);
-
-        //model.addAttribute("productDetail", productDetail);
-
-        //Cookie cookie = new Cookie("userToken","abcdefg");
-
-        //response.addCookie(cookie);
 
         return "home";
     }

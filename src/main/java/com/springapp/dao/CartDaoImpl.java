@@ -2,9 +2,7 @@ package com.springapp.dao;
 
 import com.springapp.common.CONST;
 import com.springapp.entity.GbtbCartEntity;
-import com.springapp.entity.GbtbProductInfoEntity;
 import org.hibernate.*;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

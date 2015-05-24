@@ -1,7 +1,6 @@
 package com.springapp.dao;
 
 import com.springapp.common.CONST;
-import com.springapp.entity.GbtbProductInfoEntity;
 import com.springapp.entity.GbtbUserInfoEntity;
 import org.hibernate.Criteria;
 import org.hibernate.Query;

@@ -1,7 +1,6 @@
 package com.springapp.common;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 /**
  * Created by zhuoyangzong on 15/5/22.
@@ -11,7 +10,7 @@ public class Util {
     // 把10位时间戳转成60进制
     public static String createCodeFromTS(Timestamp ts){
 
-        // 把时间戳转成int TODO 支持到2038/1/19 11:14:7
+        // 把时间戳转成long
         Long lgTs = ts.getTime();
 
         StringBuffer sb = new StringBuffer();

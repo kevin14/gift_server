@@ -3,7 +3,6 @@ package com.springapp.dao;
 import com.springapp.entity.Condition;
 import com.springapp.entity.GbtbProductInfoEntity;
 import org.hibernate.Criteria;
-import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
