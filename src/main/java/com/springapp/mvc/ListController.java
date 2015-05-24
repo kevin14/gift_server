@@ -1,6 +1,7 @@
 package com.springapp.mvc;
 
 import com.springapp.common.CONST;
+import com.springapp.common.Util;
 import com.springapp.dao.CodeDao;
 import com.springapp.dao.ListDao;
 import com.springapp.entity.Condition;
@@ -42,13 +43,36 @@ public class ListController {
         Condition condition = new Condition();
         condition.setRegion(request.getParameter("region"));
         condition.setKeyWord(request.getParameter("keyWord"));
-        condition.setPrice(Integer.parseInt(request.getParameter("price")));
+        String price = request.getParameter("price");
         condition.setCategory(request.getParameter("category"));
         condition.setRate(request.getParameter("rate"));
 
-        List<GbtbProductInfoEntity> list = listDao.getProductList();
+        // 检查查询条件
+        if (condition.getRegion() == null || condition.getRegion().length() == 0) {
+            // TODO 没有传地区
+            return "";
+        }
+        if (price == null || !Util.isNumeric(price)) {
+            // TODO 价格没传或者不是数字
+            return "";
+        } else {
+            condition.setPrice(Integer.parseInt(price));
+        }
 
-        model.addAttribute("list", list.subList(currentPage * CONST.PAGESIZE, (currentPage + 1) * CONST.PAGESIZE));
+        List<GbtbProductInfoEntity> list = listDao.getProductList(condition);
+
+        if ((currentPage - 1) * CONST.PAGESIZE >= list.size()) {
+            // TODO 传来的页面数超过查询总数，用户在瞎搞
+            return "";
+        }
+
+        int endIndex = 0;
+        if ((currentPage + 1) * CONST.PAGESIZE > list.size()) {
+            endIndex = list.size();
+        } else {
+            endIndex = (currentPage + 1) * CONST.PAGESIZE;
+        }
+        model.addAttribute("list", list.subList(currentPage * CONST.PAGESIZE, endIndex));
 
         // 总页数
         int totalPage = list.size() / CONST.PAGESIZE;
@@ -67,8 +91,6 @@ public class ListController {
             List<GbtbCodeEntity> categoryList = codeDao.getCodeList(CONST.CATEGORY);
             session.setAttribute("categoryList", categoryList);
         }
-        // 保存查询条件
-        session.setAttribute("condition", condition);
 
         return "list";
     }

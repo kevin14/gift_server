@@ -29,7 +29,6 @@ public class Util {
                 mod += 55;
                 sb.append((char) mod);
             } else {
-
                 sb.append((int)mod);
             }
 
@@ -41,5 +40,15 @@ public class Util {
         }
 
         return sb.toString();
+    }
+
+    // 判断是否是数字
+    public static boolean isNumeric(String str){
+        for (int i = 0; i < str.length(); i++){
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

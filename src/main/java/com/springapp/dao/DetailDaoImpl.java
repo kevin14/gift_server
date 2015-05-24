@@ -22,6 +22,12 @@ public class DetailDaoImpl extends GeneralDaoImpl implements DetailDao {
 
             return result;
 
+        } catch (Exception e) {
+
+            // 数据库连接失败
+            e.printStackTrace();
+            return null;
+
         } finally {
             session.close();
         }
