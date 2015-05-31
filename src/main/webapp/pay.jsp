@@ -1,0 +1,205 @@
+<%@ page language="java" pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>支付页</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/pay.css">
+</head>
+<body>
+	<div class="header">
+        <div class="content-wrapper">
+            <img src="./img/logo.png" alt="" class="logo">
+            <div class="area-box">
+                送给
+                <div class="picker">
+                    上海<span class="icon-pulldown"></span>
+                    <ul class="city-list">
+                        <li>
+                            <a href="javascript:;">北京</a>
+                            <a href="javascript:;">广州</a>
+                            <a href="javascript:;">重庆</a>
+                        </li>
+                    </ul>
+                </div>
+                的朋友
+            </div>
+            <div class="user-box">
+                <!-- 登录 -->
+                <img class="avatar" src="./img/avater_32.jpg"></img>
+                <span class="user-count">2</span>
+                <ul class="user-content">
+                    <li>
+                        <a class="username" href="javascript:;">DreamOver</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的消息<span class="count">2</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的订单</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">我的收藏</a>
+                    </li>
+                    <li>
+                        <a class="quit" href="javascript:;">退出</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-box">
+                <span class="icon-cart"></span> 购物车
+                <ul class="cart-content">
+                    <li>
+                        <a href="javascript:;">
+                            <div class="cart-product">
+                                <img src="http://img.la/80x45" alt="">
+                                <span>这里是商品的名字</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="cart-product">
+                                <img src="http://img.la/80x45" alt="">
+                                <span>这里是商品的名字</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="cart-product">
+                                <img src="http://img.la/80x45" alt="">
+                                <span>这里是商品的名字</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="cart-product">
+                                <img src="http://img.la/80x45" alt="">
+                                <span>这里是商品的名字</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <div class="cart-link">
+                            <span>还有<span class="num">4</span>件商品</span>
+                            <a href="#" class="go-cart">查看购物车</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-box">
+                <input class="search" type="text" placeholder="搜索感兴趣的礼物">
+                <a href="#" class="icon-search"></a>
+            </div>
+            <img src="./img/slogan.png" alt="" class="label">
+        </div>
+    </div>
+
+	<div class="wrapper pay-wrapper">
+		<!-- 动画过程 -->
+		
+		<!-- 订单过程 -->
+		<div class="pop-bg">
+			<div class="pop s1"></div>
+			<div class="pop s2"></div>
+			<div class="pop s3"></div>
+			<div class="pop s4"></div>
+			<div class="pop s5"></div>
+			<div class="pop s6"></div>
+			<div class="pop s7"></div>
+			<div class="pop s8"></div>
+			<div class="pop s9"></div>
+			<div class="pop s10"></div>
+			<div class="pop s11"></div>
+			<div class="pop s12"></div>
+			<div class="pop s13"></div>
+			<div class="pop s14"></div>
+			<div class="pop s15"></div>
+			<div class="pop s16"></div>
+			<div class="pop s17"></div>
+			<div class="pop s18"></div>
+			<div class="pop s19"></div>
+			<div class="pop s20"></div>
+			<div class="pop s21"></div>
+			<div class="pop s22"></div>
+			<div class="pop s23"></div>
+			<div class="pop s24"></div>
+			<div class="pop s25"></div>
+			<div class="pop s26"></div>
+			<div class="pop s27"></div>
+		</div>
+		<div class="pay-notice">
+			<h1>恭喜您</h1>
+			<p>已为您精心挑选的礼物装入礼包，订单号<span class="order-number">37492387</span>，查看订单详情<br>为了您的礼物能顺利准时到达ta的手中，我们建议您</p>
+			<a href="javascript:;" class="btn pay">立即付款</a>
+		</div>
+		<div class="icon cart icon-cart_slim"></div>
+		<div class="selected-products">
+			<div class="selected-product">
+				<img src="./i/160x90/01.jpg" >
+			</div>
+			<div class="selected-product">
+				<img src="./i/160x90/02.jpg" >
+			</div>
+			<div class="selected-product">
+				<img src="./i/160x90/03.jpg" >
+			</div>
+			<div class="selected-product">
+				<img src="./i/160x90/04.jpg" >
+			</div>
+			<div class="selected-product">
+				<img src="./i/160x90/05.jpg" >
+			</div>
+			<div class="selected-product">
+				<img src="./i/160x90/06.jpg" >
+			</div>
+		</div>
+		<!-- 支付过程 -->
+		<div class="payment">
+			<h3>您需要支付</h3>
+			<p class="money"><span class="small">¥</span>399</p>
+			<p class="tip">请选择第三方支付平台</p>
+			<div class="payment-selector">
+				<a href="javascript:;" class="payment-type alipay"></a>
+				<a href="javascript:;" class="payment-type weixin"></a>
+			</div>
+			<a href="javascript:;" class="submit ensure">确定</a>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="content-wrapper">
+			<span class="number">客服电话</span>
+			<span class="numbers">4008-888-888</span>
+			<ul class="footer-nav">
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+			</ul>
+			<img src="./img/logo.png" alt="" class="logo">
+		</div>
+		<div class="footer-bar">
+			<span class="copyright">CopyRight © 2007-2016 南京新与力文化传播有限公司 苏ICP备09011225号 NewPower Co. 版权所有 经营许可证编号：苏B2-20120395</span>
+		</div>
+	</div>
+</body>
+<script data-main="./js/pay" src="./js/lib/require.js"></script>
+<script src="./js/index.js"></script>
+</html>

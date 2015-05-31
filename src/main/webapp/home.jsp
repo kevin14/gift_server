@@ -30,7 +30,7 @@
             </div>
             <div class="user-box">
                 <!-- 登录 -->
-                <img class="avatar" src="./img/avater_32.jpg"></img>
+                <img class="avatar" src="./img/avater_32.jpg"/>
                 <span class="user-count">2</span>
                 <ul class="user-content">
                     <li>
@@ -104,10 +104,10 @@
 
     <div class="slider">
         <a href="#" class="img-link show">
-            <img class="img" src="./img/slide_1.jpg"></img>
+            <img class="img" src="./img/slide_1.jpg"/>
         </a>
         <a href="#" class="img-link">
-            <img class="img" src="./img/hp_top_banner_2.jpg"></img>
+            <img class="img" src="./img/hp_top_banner_2.jpg"/>
         </a>
         <div class="btn-box">
             <a href="javascript:;" class="prev icon-arrow_left btn"></a>
@@ -117,7 +117,7 @@
 
     <div class="wrapper">
         <div class="big-guider">
-            <a href="#" class="big-guider-content c1">
+            <a href="./extract" class="big-guider-content c1">
                 <img class="guide-img" src="./img/hp_entre1.jpg" alt="">
                 <span class="txt">输入提取码，领取并挑选礼物</span><span class="icon-arow_right icon"></span>
             </a>

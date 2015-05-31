@@ -23,10 +23,6 @@ public class ListDaoImpl extends GeneralDaoImpl implements ListDao {
         Session session = getSession();
         try {
 
-            Criteria cr = session.createCriteria(GbtbProductInfoEntity.class);
-
-            cr.add(Restrictions.eq("salary", 2000));
-
             StringBuffer strQuery = new StringBuffer();
             strQuery.append("select * from gbtb_product_info where product_region = ").append(condition.getRegion());
             strQuery.append(" and product_price = ").append(condition.getPrice());
