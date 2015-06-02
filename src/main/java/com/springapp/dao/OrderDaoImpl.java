@@ -2,9 +2,12 @@ package com.springapp.dao;
 
 import com.springapp.common.CONST;
 import com.springapp.entity.GbtbTradeRecordEntity;
+import com.springapp.entity.GbtbUserInfoEntity;
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -50,12 +53,12 @@ public class OrderDaoImpl extends GeneralDaoImpl implements OrderDao {
 
         try {
 
-            Query q = session.createQuery("from GbtbTradeRecordEntity where fetchCode = :fetchCode and orderStatus = :orderStatus");
+            Criteria cr = session.createCriteria(GbtbTradeRecordEntity.class);
 
-            q.setParameter("fetchCode", fetchCode);
-            q.setParameter("orderStatus", CONST.ORDER_PAID);
+            cr.add(Restrictions.eq("fetchCode", fetchCode));
+            cr.add(Restrictions.eq("orderStatus", CONST.ORDER_PAID));
 
-            List<GbtbTradeRecordEntity> result = q.list();
+            List<GbtbTradeRecordEntity> result = cr.list();
 
             if (result.size() > 0) {
                 return result.get(0);

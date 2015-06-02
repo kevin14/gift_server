@@ -140,7 +140,10 @@
 					您可以从中任意挑选一个<br>
 					您最心仪的礼品
 				</p>
-				<a href="#" class="next">立即开始挑选</a>
+                <form action="./detail_choose.html" method="POST">
+                    <input type="hidden" value="${order.fetchCode}">
+                    <button type="submit" class="next">立即开始挑选</button>
+                </form>
 			</div>
 		</div>
 	</div>
